@@ -25,6 +25,7 @@ require('./sockets/socket');
 
 
 
+
 //*18
 //cuando el nombre esta en gris es porque no se esta usando 
     const publicPath = path.resolve(__dirname,'public')

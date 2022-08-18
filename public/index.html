@@ -29,18 +29,35 @@
         //funcion para emitir y el listen estan en el archivo index.js
         //funciona mejor mandando un objeto porque es mas util cuando se
         //envian varios argumentos
-        socket.emit('mensaje',{nombre: "juan"});
-
-
-
+        socket.emit('mensaje',{nombre: 'juan'});
         /*
         21
         aqui estoy escuando en io.emit del index.js y este es el que
         se muestra en el navegador 
         */       
         socket.on('mensaje', function(payload){
-            console.log('Escuchando' , payload);
-        })
+            console.log('Escuchando:' , payload);
+
+
+                //emision de payload  a la web //*31
+        socket.on('emitir',function(payload){
+            console.log('Escuchando:', payload)
+        });
+
+
+        //*34
+        socket.on('active-bands',function(bands){
+            console.clear();
+            console.table( bands);
+        });
+            
+        });
+
+
+
+
+  
+        
 
 
 
